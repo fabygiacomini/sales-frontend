@@ -1,0 +1,20 @@
+version: "3.5"
+services:
+  frontend-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sales-frontend
+    volumes:
+      - ".:/src"
+      - "/src/node_modules"
+    ports:
+      - "80:3000"
+    environment:
+      - NODE_ENV=development
+    networks:
+      - sales-network
+
+networks:
+  sales-network:
+    name: sales-network

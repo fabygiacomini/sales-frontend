@@ -6,15 +6,18 @@ Podemos, também, cadastrar novos vendedores, editar os já cadastrados ou remov
 E, ainda, temos telas para consultar as vendas realizadas, podendo filtrá-las por vendedor.<br>
 
 ## How to Use
-- É necessário ter instalado o [node.js](https://nodejs.org/en/download/);
-- Ir na pasta do projeto e executar o comando `npm install`: para instalar as dependências necessárias;<br>
-- E depois, na mesma pasta, o comando `npm start`: inicia a aplicação no caminho "localhost:3000"
+
+- Necessário ter Docker e Docker-Compose instalados na máquina.
+- Executar, na pasta do projeto, o comando `docker-compose up -d` para subir a aplicação.
+    - O sistema estará disponível no localhost, porta 80.
 <br>
 
-No arquivo `Backend.js` é possível alterar a url do backend (onde o sistema feito em Laravel estiver rodando como `php artisan serve`), no entanto, por padrão, está utilizando o caminho "localhost:8000/api"
+- Para testar todas as funcionalidades, é necessário que o projeto backend (citado abaixo) esteja rodando também.
+
 <br>
 
-*O backend foi feito em PHP com Laravel* e está localizado neste [repositório](https://github.com/fabygiacomini/sales-backend).
+*O backend foi feito em PHP com Laravel* e está localizado neste [repositório](https://github.com/fabygiacomini/sales-backend). <br>
+**Basta inicializar o docker de ambas as aplicações (rodando os respectivos docker-composes de cada projeto) para que os dois sistemas se comuniquem.**
 <br>
 
 ## Tecnologias utilizadas
